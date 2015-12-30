@@ -74,10 +74,10 @@ function replaceShare() {
 		this.originitialize(options);
 		var view = this;
 		this.model.on('change:permissions', function() {
-			replaceUrl2(view.$el.find('#linkText'));
+			replaceUrl2($('#linkText-' + view.cid));
 		});
 		this.model.on('change:linkShare', function() {
-			replaceUrl2(view.$el.find('#linkText'));
+			replaceUrl2($('#linkText-' + view.cid));
 		});
 	}
 }
